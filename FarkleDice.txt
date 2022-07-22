@@ -1,0 +1,76 @@
+Problem Statement:
+
+
+Farkle: Farkle is a game that uses six dice. The goal is to strategically decide how to score your own dice according to the point combinations laid out in the rules to be the first player to reach 10,000 points. Review the complete rules for this game.
+
+ Secret Strategy: All point dice do not have to be set aside. If you roll a 1 and a 5, sometimes it may be strategic to keep the 1 and roll the 5 again with the rest of the non-point dice. This may give you a better chance of rolling a three of a kind. But, at least one point die must be set aside after each roll.
+
+Points
+
+Points are acquired one of three different ways.
+● A roll of a 1 is worth 100 points.
+● A roll of a 5 is worth 50 points.
+● Three (3) dice rolled at the same time with the same value is worth 100 times the face value, for
+example: three 2’s rolled is 200 points and three 5’s rolled is 500 points.
+One exception to this rule is that three 1’s rolled is 1,000 points rather than 100 points.
+
+The Play
+
+● The first player rolls all six dice at the same time and sets aside any “point dice” (1’s, 5’s, or
+three of a kind) that appear. At this point, the player has the option to continue to roll the
+remaining dice to collect even more points, or stop and keep any points acquired.
+
+● A Farkle occurs when the dice are rolled and no point dice appear. At this point the player loses
+all the point dice he/she/it has collected during that turn, and the play passes to the player to
+the left. No points are recorded for that player’s turn.
+
+● If a player decides not to risk rolling a Farkle then he/she/it can stop rolling and the play passes
+to the player to the left. Any points collected during that turn are then recorded.
+
+● If, in the course of one turn, all six dice become point dice and are set aside, the player must roll
+all six dice at least one more time, before stopping and keeping the points collected.
+Entering the Game
+
+● In order for a player to initially enter the game, (and record points), he/she must continue to roll
+until at least 1,000 points are collected during one turn. Once the player officially enters the
+game, the points are recorded and that player may stop rolling at any time during future turns.
+Sometimes it might take many turns before a player can get started.
+
+● Secret Strategy: All point dice do not have to be set aside. If you roll a 1 and a 5, sometimes it
+may be strategic to keep the 1 and roll the 5 again with the rest of the non-point dice. This may
+give you a better chance of rolling a three of a kind. But, at least one point die must be set aside
+after each roll.
+
+Winning
+
+In order to win, a player must get 10,000 points recorded.
+After a player gets over 10,000, each of the other players get one turn to try to beat the first player who
+goes out. If none of them beat his or her score, then he or she is declared the winner. If someone beats
+his or her score then that new player wins the game.
+
+Pseudocode:
+
+Game Start
+
+Player rolls all six dice at the same time
+Loop should introduce turns for 2+ players
+
+Random number generator for diceRoll
+While player score not equal  starting score(1,000) && not equal winning score(10,000):
+	•	if “point dice” equal (three of a kind),  multiply value by 100 times.
+	•	If diceRoll of a 1 , add 100 points.
+	•	If diceRoll of a 5 , add  50 points.
+	•	If diceRoll ( 2 or 3 or 4 or 6 and not three of a kind), no point dice appear; 
+	•	Print ( Farkle occured)
+	•	player loses all the point dice he/she/it has collected during that turn, && the play passes to the player to the left && No points are recorded for that player’s turn. 
+
+//Player can SKIP turn to not risk rolling a Farkle,  Any points collected during that turn are then recorded. 
+
+If  starting score <= 1,000, Print a message to notify, end turn continue scoring
+ If a roll ;  all six dice become point dice && are set aside && one turn;  
+player must reroll all six dice at least one more time, before stopping 
+ 	Keep the points collected. 
+
+If payer score = 10,000, end game - print message
+End
+---
